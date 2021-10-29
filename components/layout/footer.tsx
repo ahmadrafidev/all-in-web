@@ -45,19 +45,21 @@ const SocialButton = ({
 function Footer(){
   return (
     <Box
-     bg={useColorModeValue('gray.50', 'gray.900')}
-     color={useColorModeValue('gray.700', 'gray.200')}>
+      as="footer"
+      bottom={'0'}
+      bg={useColorModeValue('gray.100', 'gray.900')}
+      color={useColorModeValue('gray.700', 'gray.200')}>
        <Container
         as={Stack}
-        maxW={'6xl'}
+        maxW={'7xl'}
         py={4}
         direction={{ base: 'column', md: 'row' }}
         spacing={4}
         justify={{ base: 'center', md: 'space-between' }}
         align={{ base: 'center', md: 'center' }}>
-        <Text fontFamily={'DMSans'}>© 2021 Ahmad Rafi Wirana. All rights reserved.</Text>
+        <Text fontFamily={'DMSans'} fontWeight={'bold'} fontSize={{base: 'lg', md: 'xl'}}>© 2021 Ahmad Rafi Wirana. All rights reserved.</Text>
         <Stack direction={'row'} spacing={6}>
-          <Text fontFamily={'DMSans'}>Feedback: </Text>
+          <Text fontFamily={'DMSans'} fontWeight={'bold'} fontSize={{base: 'lg', md: 'xl'}}>Feedback: </Text>
           <SocialButton label={'Twitter'} href={'https://twitter.com/ahhmadrafi'}>
             <FaTwitter />
           </SocialButton>
