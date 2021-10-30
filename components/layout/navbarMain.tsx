@@ -15,9 +15,11 @@ import {
   useDisclosure,
   useColorModeValue,
   Stack,
+  useColorMode,
   Container,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 
 const Links = ['Dashboard'];
 
@@ -37,6 +39,7 @@ const NavLink = ({ children }: { children: ReactNode }) => (
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <>
@@ -98,6 +101,9 @@ export default function Navbar() {
                   <MenuItem>Log out</MenuItem>
                 </MenuList>
               </Menu>
+              <Button onClick={toggleColorMode} ml={4}>
+                {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+              </Button>
             </Flex>
           </Flex>
 
