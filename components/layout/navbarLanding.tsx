@@ -32,7 +32,7 @@ export default function NavbarLanding() {
     <>
       <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4} >
         <Container
-          maxW={'7xl'}
+          maxW={'container.xl'}
           as={Stack}
         >
           <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
@@ -44,7 +44,7 @@ export default function NavbarLanding() {
             </Link>
             <Flex alignItems={'center'}>
               <Stack direction={'row'} spacing={7} alignItems={'center'}>
-                <Link href="about">
+                <Link href="#about">
                   <Box 
                     fontSize={{base:'lg', md:'xl'}}
                     fontWeight={'bold'}>

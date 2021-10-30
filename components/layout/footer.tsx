@@ -51,7 +51,7 @@ function Footer(){
       color={useColorModeValue('gray.700', 'gray.200')}>
        <Container
         as={Stack}
-        maxW={'7xl'}
+        maxW={'container.xl'}
         py={4}
         direction={{ base: 'column', md: 'row' }}
         spacing={4}
