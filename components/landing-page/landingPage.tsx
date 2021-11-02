@@ -11,11 +11,6 @@ import {
   Heading
 } from "@chakra-ui/react"
 
-/*
-  Todo:
-  benerin sign up dan sign in button
-  buat about as a page jadi pas diklik kayak satu halaman (ide: jadiin beda box)
-*/
 
 
 function LandingPage() {
@@ -62,16 +57,22 @@ function LandingPage() {
               rounded={'full'} 
               px={{md:20}} 
               mx={'24'} 
-              bg={'#1F1C2C'} 
-              color={'white'}>
-              SIGN UP</Button>
+              colorScheme="blue"
+              >
+                <Link passHref href="/signup">
+                  SIGN UP
+                </Link>
+              </Button>
 
             <Button 
               px={{md:20}}
               rounded={'full'}
-              bg={'#1F1C2C'} 
-              color={'white'}>
-                SIGN IN</Button>
+              colorScheme="blue"
+              >
+                <Link passHref href="/signin">
+                  SIGN IN
+                </Link>
+              </Button>
           </Stack>
 
           <Link href="/home" passHref>
