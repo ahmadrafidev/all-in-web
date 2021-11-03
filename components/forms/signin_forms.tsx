@@ -72,7 +72,7 @@ export default function SignIn() {
                   fontWeight={'semibold'}
                   mr={'4'}
                 >
-                    Doesn't have an account?
+                    Don't have an account?
                 </Text>
                 <Text
                   color="blue.500"

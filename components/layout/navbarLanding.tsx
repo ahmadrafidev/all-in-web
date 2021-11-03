@@ -6,10 +6,12 @@ import {
   useColorModeValue,
   Stack,
   useColorMode,
-  Link,
-  Container
+  Container,
+  Text,
+  Link
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+// import Link from 'next/link'
 
 const NavLink = ({ children }: { children: ReactNode }) => (
   <Link
@@ -36,15 +38,17 @@ export default function NavbarLanding() {
           as={Stack}
         >
           <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-            <Link href='/'>
-              <Box
-              fontSize={{base:'xl', sm:'2xl', md:'3xl'}}
-              fontWeight={'bold'}
-              >ALL IN WEB</Box>
+            <Link href='/' passHref>
+              <Text 
+                textDecoration="none"
+                fontSize={{base:'xl', sm:'2xl', md:'3xl'}}
+                fontWeight={'bold'}
+                >ALL IN WEB
+                </Text>
             </Link>
             <Flex alignItems={'center'}>
               <Stack direction={'row'} spacing={7} alignItems={'center'}>
-                <Link href="#about">
+                <Link href="#about" passHref>
                   <Box 
                     fontSize={{base:'lg', md:'xl'}}
                     fontWeight={'bold'}>

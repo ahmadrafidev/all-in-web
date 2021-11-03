@@ -1,9 +1,22 @@
 import {
-  Text
+  Text,
+  Box,
+  Container,
 } from '@chakra-ui/react';
 
 export default function HomePage(){
   return(
-    <Text>this is home</Text>
+    <>
+      <Box>
+        <Container
+          minH={'100%'}
+          w={"100%"}
+          h={"100%"}
+          maxW="container.xl"
+        >
+          <Text textAlign={"center"}>soon</Text>
+          </Container>
+      </Box>
+    </>
   );
 }

@@ -81,6 +81,9 @@ function LandingPage() {
                 fontSize={{base: '2xl', md: '3xl'}}
                 fontFamily={'DMSans'}
                 fontWeight={'bold'}
+                _hover={{
+                  textDecoration: "underline"
+                }}
               >log in as a guest</Text>
             </a>
           </Link>
