@@ -38,7 +38,7 @@ export default function NavbarLanding() {
           as={Stack}
         >
           <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-            <Link href='/' passHref>
+            <Link href='/'>
               <Text 
                 textDecoration="none"
                 fontSize={{base:'xl', sm:'2xl', md:'3xl'}}

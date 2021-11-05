@@ -14,7 +14,15 @@ export default function HomePage(){
           h={"100%"}
           maxW="container.xl"
         >
-          <Text textAlign={"center"}>soon</Text>
+          <Text 
+            my='31%'
+            textAlign={"center"}
+            fontFamily={'DMSans'}
+            fontSize={30}
+            fontWeight={'bold'}
+            >
+              Nothing here. Maybe add one?
+            </Text>
           </Container>
       </Box>
     </>
