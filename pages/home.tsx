@@ -1,11 +1,12 @@
 import Head from 'next/head'
+import { Fragment } from "react";
 import Footer from '../components/layout/footer';
 import HomePage from '../components/home-page/homePage';
 import Navbar from '../components/layout/navbarMain';
 
 const Home = () => {
   return (
-    <section>
+    <Fragment>
       <Head>
         <title>Save Everything!</title>
         <meta 
@@ -16,7 +17,7 @@ const Home = () => {
       <Navbar/>
       <HomePage/>
       <Footer/>
-    </section>
+    </Fragment>
   );
 }
 

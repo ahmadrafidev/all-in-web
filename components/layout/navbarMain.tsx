@@ -17,7 +17,7 @@ import {
   Stack,
   useColorMode,
   Container,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 

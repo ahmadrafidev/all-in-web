@@ -1,9 +1,10 @@
 import Head from 'next/head'
+import { Fragment } from "react";
 import SignIn from '../components/forms/signin_forms';
 
 const Home = () => {
   return (
-    <section>
+    <Fragment>
       <Head>
         <title>Save Everything!</title>
         <meta 
@@ -12,7 +13,7 @@ const Home = () => {
         />
       </Head>
       <SignIn/>
-    </section>
+    </Fragment>
   );
 }
 

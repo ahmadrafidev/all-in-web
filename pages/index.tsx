@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { Fragment } from "react";
 import LandingPage from '../components/landing-page/landingPage';
 import Footer from '../components/layout/footer';
 import NavbarLanding from '../components/layout/navbarLanding';
@@ -6,7 +7,7 @@ import NavbarLanding from '../components/layout/navbarLanding';
 
 const index = () => {
   return (
-    <section>
+    <Fragment>
       <Head>
         <title>Save Everything!</title>
         <meta 
@@ -17,7 +18,7 @@ const index = () => {
       <NavbarLanding/>
       <LandingPage />
       <Footer/>
-    </section>
+    </Fragment>
   );
 }
 
