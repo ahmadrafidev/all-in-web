@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react';
 import { FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { ReactNode } from 'react';
+import { motion } from 'framer-motion';
 
 const SocialButton = ({
   children,
@@ -46,31 +47,60 @@ function Footer(){
   return (
     <Box
       as="footer"
-      bottom={'0'}
-      bg={useColorModeValue('gray.100', 'gray.900')}
-      color={useColorModeValue('gray.700', 'gray.200')}>
-       <Container
+      bottom={"0"}
+      bg={useColorModeValue("gray.100", "gray.900")}
+      color={useColorModeValue("gray.700", "gray.200")}
+    >
+      <Container
         as={Stack}
-        maxW={'container.xl'}
+        maxW={"container.xl"}
         py={4}
-        direction={{ base: 'column', md: 'row' }}
+        direction={{ base: "column", md: "row" }}
         spacing={4}
-        justify={{ base: 'center', md: 'space-between' }}
-        align={{ base: 'center', md: 'center' }}>
-        <Text fontFamily={'DMSans'} fontWeight={'bold'} fontSize={{base: 'lg', md: 'xl'}}>© 2021 Ahmad Rafi Wirana. All rights reserved.</Text>
-        <Stack direction={'row'} spacing={6}>
-          <Text fontFamily={'DMSans'} fontWeight={'bold'} fontSize={{base: 'lg', md: 'xl'}}>Feedback: </Text>
-          <SocialButton label={'Twitter'} href={'https://twitter.com/ahhmadrafi'}>
-            <FaTwitter />
-          </SocialButton>
-          <SocialButton label={'Instagram'} href={'https://www.instagram.com/ahhmadrafi/'}>
-            <FaInstagram />
-          </SocialButton>
-          <SocialButton label={'Linkedin'} href={'https://www.linkedin.com/in/ahmadrafiwirana/'}>
-            <FaLinkedin />
-          </SocialButton>
+        justify={{ base: "center", md: "space-between" }}
+        align={{ base: "center", md: "center" }}
+      >
+        <Text
+          fontFamily={"DMSans"}
+          fontWeight={"bold"}
+          fontSize={{ base: "lg", md: "xl" }}
+        >
+          © 2021 - ahmadrafidev. All rights reserved.
+        </Text>
+        <Stack direction={"row"} spacing={6}>
+          <Text
+            fontFamily={"DMSans"}
+            fontWeight={"bold"}
+            fontSize={{ base: "lg", md: "xl" }}
+          >
+            Feedback:{" "}
+          </Text>
+          <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <SocialButton
+              label={"Twitter"}
+              href={"https://twitter.com/ahhmadrafi"}
+            >
+              <FaTwitter />
+            </SocialButton>
+          </motion.button>
+          <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <SocialButton
+              label={"Instagram"}
+              href={"https://www.instagram.com/ahhmadrafi/"}
+            >
+              <FaInstagram />
+            </SocialButton>
+          </motion.button>
+          <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <SocialButton
+              label={"Linkedin"}
+              href={"https://www.linkedin.com/in/ahmadrafiwirana/"}
+            >
+              <FaLinkedin />
+            </SocialButton>
+          </motion.button>
         </Stack>
-       </Container>
+      </Container>
     </Box>
   );
 }
