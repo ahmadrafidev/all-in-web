@@ -19,7 +19,7 @@ const NavLinkAbout = ({ children }: { children: ReactNode }) => (
     rounded={'md'}
     _hover={{
       textDecoration: 'none',
-      bg: useColorModeValue('gray.100', 'gray.00'),
+      bg: useColorModeValue('gray.200', 'gray.700'),
     }}
     href={'#about'}>
     {children}
@@ -33,9 +33,9 @@ const NavLinkHome = ({ children }: { children: ReactNode }) => (
     rounded={"md"}
     _hover={{
       textDecoration: "none",
-      bg: useColorModeValue("gray.100", "gray.00"),
+      bg: useColorModeValue("gray.200", "gray.700"),
     }}
-    href={"#"}
+    href={"/"}
   >
     {children}
   </Link>
