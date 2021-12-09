@@ -98,16 +98,22 @@ export default function Navbar() {
             </HStack>
             <Flex alignItems={"center"}>
               <Menu>
-                <MenuButton
-                  as={Button}
-                  variant={"outline"}
-                  colorScheme="gray.900"
-                  size={"sm"}
-                  mr={4}
-                  rightIcon={<AddIcon />}
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                 >
-                  Add
-                </MenuButton>
+                  <MenuButton
+                    as={Button}
+                    variant={"outline"}
+                    colorScheme="gray.900"
+                    size={"sm"}
+                    mr={4}
+                    rightIcon={<AddIcon />}
+                  >
+                    Add
+                  </MenuButton>
+                </motion.button>
+
                 <MenuList>
                   <MenuItem icon={<Icon as={MdNotes} w={5} h={5} />}>
                     Notes
@@ -121,20 +127,26 @@ export default function Navbar() {
                 </MenuList>
               </Menu>
               <Menu>
-                <MenuButton
-                  as={Button}
-                  rounded={"full"}
-                  variant={"link"}
-                  cursor={"pointer"}
-                  minW={0}
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                 >
-                  <Avatar
-                    size={"sm"}
-                    src={
-                      "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
-                    }
-                  />
-                </MenuButton>
+                  <MenuButton
+                    as={Button}
+                    rounded={"full"}
+                    variant={"link"}
+                    cursor={"pointer"}
+                    minW={0}
+                  >
+                    <Avatar
+                      size={"sm"}
+                      src={
+                        "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                      }
+                    />
+                  </MenuButton>
+                </motion.button>
+
                 <MenuList>
                   <MenuItem icon={<Icon as={MdDashboard} w={5} h={5} />}>
                     Dashboard
@@ -148,9 +160,14 @@ export default function Navbar() {
                   </MenuItem>
                 </MenuList>
               </Menu>
-              <Button onClick={toggleColorMode} ml={4}>
-                {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-              </Button>
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <Button onClick={toggleColorMode} ml={4}>
+                  {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+                </Button>
+              </motion.button>
             </Flex>
           </Flex>
 

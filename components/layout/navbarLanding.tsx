@@ -11,6 +11,7 @@ import {
   Link
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+import { motion } from "framer-motion";
 
 const NavLinkAbout = ({ children }: { children: ReactNode }) => (
   <Link
@@ -46,32 +47,33 @@ export default function NavbarLanding() {
 
   return (
     <>
-      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4} >
-        <Container
-          maxW={'container.xl'}
-          as={Stack}
-        >
-          <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+      <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
+        <Container maxW={"container.xl"} as={Stack}>
+          <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
             <NavLinkHome>
-              <Text 
+              <Text
                 textDecoration="none"
-                fontSize={{base:'xl', sm:'2xl', md:'3xl'}}
-                fontWeight={'bold'}
-                >ALL IN WEB
-                </Text>
+                fontSize={{ base: "xl", sm: "2xl", md: "3xl" }}
+                fontWeight={"bold"}
+              >
+                ALL IN WEB
+              </Text>
             </NavLinkHome>
-            <Flex alignItems={'center'}>
-              <Stack direction={'row'} spacing={7} alignItems={'center'}>
+            <Flex alignItems={"center"}>
+              <Stack direction={"row"} spacing={7} alignItems={"center"}>
                 <NavLinkAbout>
-                  <Box 
-                    fontSize={{base:'lg', md:'xl'}}
-                    fontWeight={'bold'}>
+                  <Box fontSize={{ base: "lg", md: "xl" }} fontWeight={"bold"}>
                     About
                   </Box>
                 </NavLinkAbout>
-                <Button onClick={toggleColorMode}>
-                  {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-                </Button>
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <Button onClick={toggleColorMode}>
+                    {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+                  </Button>
+                </motion.button>
               </Stack>
             </Flex>
           </Flex>
