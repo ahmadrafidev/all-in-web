@@ -17,9 +17,18 @@ import {
   Stack,
   useColorMode,
   Container,
+  Icon
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+import {
+  MdNotes,
+  MdAddTask,
+  MdStorage,
+  MdDashboard,
+  MdPerson,
+  MdLogout,
+} from "react-icons/md";
 import { motion } from "framer-motion";
 
 const Links = ['Dashboard'];
@@ -88,15 +97,29 @@ export default function Navbar() {
               </HStack>
             </HStack>
             <Flex alignItems={"center"}>
-              <Button
-                variant={"outline"}
-                colorScheme="gray.900"
-                size={"sm"}
-                mr={4}
-                leftIcon={<AddIcon />}
-              >
-                Add
-              </Button>
+              <Menu>
+                <MenuButton
+                  as={Button}
+                  variant={"outline"}
+                  colorScheme="gray.900"
+                  size={"sm"}
+                  mr={4}
+                  rightIcon={<AddIcon />}
+                >
+                  Add
+                </MenuButton>
+                <MenuList>
+                  <MenuItem icon={<Icon as={MdNotes} w={5} h={5} />}>
+                    Notes
+                  </MenuItem>
+                  <MenuItem icon={<Icon as={MdAddTask} w={5} h={5} />}>
+                    Todo List
+                  </MenuItem>
+                  <MenuItem icon={<Icon as={MdStorage} w={5} h={5} />}>
+                    Database
+                  </MenuItem>
+                </MenuList>
+              </Menu>
               <Menu>
                 <MenuButton
                   as={Button}
@@ -113,10 +136,16 @@ export default function Navbar() {
                   />
                 </MenuButton>
                 <MenuList>
-                  <MenuItem>Dashboard</MenuItem>
-                  <MenuItem>Profile</MenuItem>
+                  <MenuItem icon={<Icon as={MdDashboard} w={5} h={5} />}>
+                    Dashboard
+                  </MenuItem>
+                  <MenuItem icon={<Icon as={MdPerson} w={5} h={5} />}>
+                    Profile
+                  </MenuItem>
                   <MenuDivider />
-                  <MenuItem>Log out</MenuItem>
+                  <MenuItem icon={<Icon as={MdLogout} w={5} h={5} />}>
+                    Log out
+                  </MenuItem>
                 </MenuList>
               </Menu>
               <Button onClick={toggleColorMode} ml={4}>
