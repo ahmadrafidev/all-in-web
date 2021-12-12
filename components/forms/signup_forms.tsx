@@ -16,6 +16,9 @@ import {
 import Link from 'next/link'
 import React, {useState} from "react";
 
+// TODO: setting up firebase for sign up and log in
+
+
 export default function SignUp() {
 
   return (
@@ -66,7 +69,7 @@ export default function SignUp() {
               <Center>
                 <Text color="blue.500" fontSize={"lg"} fontWeight={"semibold"}>
                   <Link href={"/"} passHref>
-                    Go Back
+                    Go Home
                   </Link>
                 </Text>
               </Center>

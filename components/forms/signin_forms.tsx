@@ -64,7 +64,7 @@ export default function SignIn() {
               <Center>
                 <Text color="blue.500" fontSize={"lg"} fontWeight={"semibold"}>
                   <Link href={"/"} passHref>
-                    Go Back
+                    Go Home
                   </Link>
                 </Text>
               </Center>
