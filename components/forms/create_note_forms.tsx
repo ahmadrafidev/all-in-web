@@ -1,1 +1,12 @@
-export {}
+import {
+    Box
+} from '@chakra-ui/react';
+
+
+export default function Notes(){
+    return(
+        <Box>
+            tes
+        </Box>
+    );
+}
