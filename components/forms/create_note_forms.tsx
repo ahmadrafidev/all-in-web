@@ -6,7 +6,7 @@ import {
 export default function Notes(){
     return(
         <Box>
-            tes
+            Notes form page
         </Box>
     );
 }
