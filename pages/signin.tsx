@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { Fragment } from "react";
 import SignIn from '../components/forms/signin_forms';
 
-const Home = () => {
+const SignInPage = () => {
   return (
     <Fragment>
       <Head>
@@ -17,4 +17,4 @@ const Home = () => {
   );
 }
 
-export default Home
+export default SignInPage
