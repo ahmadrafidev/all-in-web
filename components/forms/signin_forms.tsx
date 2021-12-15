@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import {
   Flex,
   Box,
@@ -11,8 +10,8 @@ import {
   Heading,
   Text,
   useColorModeValue,
-  Center
-} from '@chakra-ui/react';
+  Center,
+} from "@chakra-ui/react";
 import Link from 'next/link'
 
 export default function SignIn() {
