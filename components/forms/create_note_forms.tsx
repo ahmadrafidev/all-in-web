@@ -48,11 +48,12 @@ export default function NotesForm(){
               <Text
                 fontSize={'3xl'}
                 align={'center'}
+                fontWeight={'bold'}
                 >CREATE A NEW NOTES
               </Text>
               <form onSubmit={submitHandler}>
                   <FormControl my={8} id='title' isRequired>
-                      <FormLabel>Title</FormLabel>
+                      <FormLabel fontWeight={'semibold'}>Title</FormLabel>
                       <Input 
                         onChange={(e) => setTitle(e.target.value)} 
                         variant='outline' 
@@ -65,7 +66,7 @@ export default function NotesForm(){
                   </FormControl>
 
                   <FormControl my={8} id='notes' isRequired>
-                      <FormLabel>Notes</FormLabel>
+                      <FormLabel fontWeight={'semibold'}>Notes</FormLabel>
                       <Textarea 
                         onChange={(e) => setNotes(e.target.value)}  
                         variant={'outline'} 
