@@ -4,7 +4,7 @@ import {
   Flex,
   Avatar,
   HStack,
-  Link,
+  Link as ChakraLink,
   IconButton,
   Button,
   Menu,
@@ -30,11 +30,12 @@ import {
   MdLogout,
 } from "react-icons/md";
 import { motion } from "framer-motion";
+import Link from 'next/link'
 
 const Links = ['Dashboard'];
 
 const NavLinkHome = ({ children }: { children: ReactNode }) => (
-  <Link
+  <ChakraLink
     px={2}
     py={1}
     rounded={'md'}
@@ -44,11 +45,11 @@ const NavLinkHome = ({ children }: { children: ReactNode }) => (
     }}
     href={'/home'}>
     {children}
-  </Link>
+  </ChakraLink>
 );
 
 const NavLink = ({ children }: { children: ReactNode }) => (
-  <Link
+  <ChakraLink
     px={2}
     py={1}
     rounded={"md"}
@@ -59,7 +60,7 @@ const NavLink = ({ children }: { children: ReactNode }) => (
     href={"#"}
   >
     {children}
-  </Link>
+  </ChakraLink>
 );
 
 export default function Navbar() {
@@ -115,9 +116,13 @@ export default function Navbar() {
                 </motion.button>
 
                 <MenuList>
-                  <MenuItem icon={<Icon as={MdNotes} w={5} h={5} />}>
-                    Notes
-                  </MenuItem>
+                  <Link href='/notes' passHref>
+                    <MenuItem icon={<Icon as={MdNotes} w={5} h={5} />}>
+                        <a>
+                          Notes
+                        </a>
+                    </MenuItem>
+                  </Link>
                   <MenuItem icon={<Icon as={MdAddTask} w={5} h={5} />}>
                     Todo List
                   </MenuItem>

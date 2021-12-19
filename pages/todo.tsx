@@ -1,20 +1,23 @@
 import Head from 'next/head'
 import { Fragment } from "react";
-import SignIn from '../components/forms/signin_forms';
+import Navbar from '../components/layout/navbarMain';
+import Footer from '../components/layout/footer';
 
-const SignInPage = () => {
+
+const NotesPage = () => {
   return (
     <Fragment>
       <Head>
         <title>Save Everything!</title>
         <meta 
-          name='home page'
+          name='description'
           content='a website to save everything'
         />
       </Head>
-      <SignIn/>
+      <Navbar/>
+      <Footer/>
     </Fragment>
   );
 }
 
-export default SignInPage
+export default NotesPage
