@@ -133,7 +133,10 @@ export default function Navbar() {
                     </MenuItem>
                   </Link>
 
-                  <MenuItem onClick={onOpen} icon={<Icon as={MdAddTask} w={5} h={5} />}>
+                  <MenuItem
+                    onClick={onOpen}
+                    icon={<Icon as={MdAddTask} w={5} h={5} />}
+                  >
                     Todo
                   </MenuItem>
                   <Drawer
@@ -166,12 +169,22 @@ export default function Navbar() {
                         </Stack>
                       </DrawerBody>
                       <DrawerFooter borderTopWidth="1px">
-                        <Button variant="outline" mr={3} onClick={onClose}>
-                          Cancel
-                        </Button>
-                        <Button rightIcon={<AddIcon />} colorScheme="blue">
-                          Add
-                        </Button>
+                        <motion.button
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.9 }}
+                        >
+                          <Button rightIcon={<CloseIcon/>} variant="outline" mr={3} onClick={onClose}>
+                            Cancel
+                          </Button>
+                        </motion.button>
+                        <motion.button
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.9 }}
+                        >
+                          <Button rightIcon={<AddIcon />} colorScheme="blue">
+                            Add
+                          </Button>
+                        </motion.button>
                       </DrawerFooter>
                     </DrawerContent>
                   </Drawer>
