@@ -116,16 +116,16 @@ export default function Navbar() {
                 </motion.button>
 
                 <MenuList>
-                  <Link href='/notes' passHref>
+                  <Link href="/notes" passHref>
                     <MenuItem icon={<Icon as={MdNotes} w={5} h={5} />}>
-                        <a>
-                          Notes
-                        </a>
+                      <a>Notes</a>
                     </MenuItem>
                   </Link>
-                  <MenuItem icon={<Icon as={MdAddTask} w={5} h={5} />}>
-                    Todo List
-                  </MenuItem>
+                  <Link href="/todo" passHref>
+                    <MenuItem icon={<Icon as={MdAddTask} w={5} h={5} />}>
+                      <a>Todo</a>
+                    </MenuItem>
+                  </Link>
                   <MenuItem icon={<Icon as={MdStorage} w={5} h={5} />}>
                     Database
                   </MenuItem>

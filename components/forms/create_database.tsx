@@ -3,7 +3,7 @@ import {
 } from '@chakra-ui/react';
 
 
-export default function Database(){
+export default function DBPage(){
     return(
         <Box>
             Database form page here

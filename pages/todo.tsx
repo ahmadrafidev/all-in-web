@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { Fragment } from "react";
 import Navbar from '../components/layout/navbarMain';
 import Footer from '../components/layout/footer';
+import Todo from '../components/forms/create_todo';
 
 
 const NotesPage = () => {
@@ -15,6 +16,7 @@ const NotesPage = () => {
         />
       </Head>
       <Navbar/>
+      <Todo/>
       <Footer/>
     </Fragment>
   );
