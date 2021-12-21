@@ -17,7 +17,16 @@ import {
   Stack,
   useColorMode,
   Container,
-  Icon
+  Icon,
+  Drawer,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  Textarea,
+  Input
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
@@ -31,6 +40,7 @@ import {
 } from "react-icons/md";
 import { motion } from "framer-motion";
 import Link from 'next/link'
+import React from 'react';
 
 const Links = ['Dashboard'];
 
@@ -66,6 +76,7 @@ const NavLink = ({ children }: { children: ReactNode }) => (
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
+  const firstField = React.useRef();
 
   return (
     <>
@@ -121,11 +132,50 @@ export default function Navbar() {
                       <a>Notes</a>
                     </MenuItem>
                   </Link>
-                  <Link href="/todo" passHref>
-                    <MenuItem icon={<Icon as={MdAddTask} w={5} h={5} />}>
-                      <a>Todo</a>
-                    </MenuItem>
-                  </Link>
+
+                  <MenuItem onClick={onOpen} icon={<Icon as={MdAddTask} w={5} h={5} />}>
+                    Todo
+                  </MenuItem>
+                  <Drawer
+                    isOpen={isOpen}
+                    placement="right"
+                    initialFocusRef={firstField}
+                    onClose={onClose}
+                  >
+                    <DrawerOverlay />
+                    <DrawerContent>
+                      <DrawerCloseButton />
+                      <DrawerHeader borderBottomWidth="1px">
+                        CREATE NEW TODO
+                      </DrawerHeader>
+                      <DrawerBody>
+                        <Stack spacing="24px" mt={5}>
+                          <Box>
+                            <Input
+                              ref={firstField}
+                              id="username"
+                              placeholder="Title"
+                            />
+                          </Box>
+                          <Box>
+                            <Textarea
+                              id="desc"
+                              placeholder="Enter litte notes"
+                            />
+                          </Box>
+                        </Stack>
+                      </DrawerBody>
+                      <DrawerFooter borderTopWidth="1px">
+                        <Button variant="outline" mr={3} onClick={onClose}>
+                          Cancel
+                        </Button>
+                        <Button rightIcon={<AddIcon />} colorScheme="blue">
+                          Add
+                        </Button>
+                      </DrawerFooter>
+                    </DrawerContent>
+                  </Drawer>
+
                   <MenuItem icon={<Icon as={MdStorage} w={5} h={5} />}>
                     Database
                   </MenuItem>
