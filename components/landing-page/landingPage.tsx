@@ -57,7 +57,7 @@ function LandingPage() {
                 }}
               >
                 <Link passHref href="/signup">
-                  SIGN UP
+                  <a>SIGN UP</a>
                 </Link>
               </Button>
 
@@ -72,7 +72,7 @@ function LandingPage() {
                 }}
               >
                 <Link passHref href="/signin">
-                  SIGN IN
+                  <a>SIGN IN</a>
                 </Link>
               </Button>
             </Stack>

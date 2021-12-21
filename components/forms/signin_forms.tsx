@@ -36,11 +36,11 @@ export default function SignIn() {
           <Stack spacing={4}>
             <FormControl id="email" isRequired>
               <FormLabel>Email address</FormLabel>
-              <Input type="email" />
+              <Input type="email" placeholder="example@mail.com" />
             </FormControl>
             <FormControl id="password" isRequired>
               <FormLabel>Password</FormLabel>
-              <Input type="password" />
+              <Input type="password" placeholder="******" />
             </FormControl>
             <Stack spacing={10}>
               <Stack
